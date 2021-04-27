@@ -4,6 +4,8 @@ import SwiperCore, { Navigation, Pagination } from 'swiper';
 
 SwiperCore.use([Navigation, Pagination]);
 
+import { SliderSwiper } from './SliderSwiper';
+
 export function Continents() {
 	return (
 		<Flex
@@ -50,196 +52,52 @@ export function Continents() {
 						}}
 						onReachEnd={() => console.log('Swiper end reached')}>
 						<SwiperSlide>
-							<Flex
-								align="center"
-								maxHeight="100%"
-								justify="center"
-								direction="column"
-								width="100%"
-								h="450px"
-								bgPosition="center"
-								bgRepeat="no-repeat"
-								bgSize="cover"
-								boxShadow="inset 0 0 0 2000px rgba(0, 0, 0, 0.4)"
-								bgImage="url('./images/africa.jpg')">
-								<Text fontWeight="700" color="gray.50" fontSize="48px">
-									África
-								</Text>
-								<Text
-									fontWeight="400"
-									color="gray.100"
-									maxWidth="900px"
-									width="100%"
-									textAlign="center"
-									fontSize="36px">
-									30 milhões de quilômetros quadrado
-								</Text>
-							</Flex>
+							<SliderSwiper name="África" src="url('./images/africa.jpg')">
+								30 milhões de quilômetros quadrado
+							</SliderSwiper>
 						</SwiperSlide>
+
 						<SwiperSlide>
-							<Flex
-								align="center"
-								maxHeight="100%"
-								justify="center"
-								direction="column"
-								width="1240px"
-								maxWidth="100%"
-								h="450px"
-								bgPosition="center"
-								bgRepeat="no-repeat"
-								bgSize="cover"
-								boxShadow="inset 0 0 0 2000px rgba(0, 0, 0, 0.4)"
-								bgImage="url('./images/antarctica.jpg')">
-								<Text fontWeight="700" color="gray.50" fontSize="48px">
-									Antártida
-								</Text>
-								<Text
-									fontWeight="400"
-									color="gray.100"
-									maxWidth="900px"
-									width="100%"
-									textAlign="center"
-									fontSize="36px">
-									É o continente mais frio e mais seco
-								</Text>
-							</Flex>
+							<SliderSwiper
+								name="Antártida"
+								src="url('./images/antarctica.jpg')">
+								É o continente mais frio e mais seco
+							</SliderSwiper>
 						</SwiperSlide>
+
 						<SwiperSlide>
-							<Flex
-								align="center"
-								maxHeight="100%"
-								justify="center"
-								direction="column"
-								width="100%"
-								h="450px"
-								bgPosition="center"
-								bgRepeat="no-repeat"
-								bgSize="cover"
-								boxShadow="inset 0 0 0 2000px rgba(0, 0, 0, 0.4)"
-								bgImage="url('./images/asia.jpg')">
-								<Text fontWeight="700" color="gray.50" fontSize="48px">
-									Ásia
-								</Text>
-								<Text
-									fontWeight="400"
-									color="gray.100"
-									maxWidth="900px"
-									width="100%"
-									textAlign="center"
-									fontSize="36px">
-									O maior dos continentes, tanto em área como em população
-								</Text>
-							</Flex>
+							<SliderSwiper name="Ásia" src="url('./images/asia.jpg')">
+								O maior dos continentes, tanto em área como em população
+							</SliderSwiper>
 						</SwiperSlide>
+
 						<SwiperSlide>
-							<Flex
-								align="center"
-								maxHeight="100%"
-								justify="center"
-								direction="column"
-								width="100%"
-								h="450px"
-								bgPosition="center"
-								bgRepeat="no-repeat"
-								bgSize="cover"
-								boxShadow="inset 0 0 0 2000px rgba(0, 0, 0, 0.4)"
-								bgImage="url('./images/europe.jpg')">
-								<Text fontWeight="700" color="gray.50" fontSize="48px">
-									Europa
-								</Text>
-								<Text
-									fontWeight="400"
-									color="gray.100"
-									maxWidth="900px"
-									width="100%"
-									textAlign="center"
-									fontSize="36px">
-									O Continente mais antigo.
-								</Text>
-							</Flex>
+							<SliderSwiper name="Europa" src="url('./images/europe.jpg')">
+								O Continente mais antigo.
+							</SliderSwiper>
 						</SwiperSlide>
+
 						<SwiperSlide>
-							<Flex
-								align="center"
-								maxHeight="100%"
-								justify="center"
-								direction="column"
-								width="100%"
-								h="450px"
-								bgPosition="center"
-								bgRepeat="no-repeat"
-								bgSize="cover"
-								boxShadow="inset 0 0 0 2000px rgba(0, 0, 0, 0.4)"
-								bgImage="url('./images/north-america.jpg')">
-								<Text fontWeight="700" color="gray.50" fontSize="48px">
-									América do Norte
-								</Text>
-								<Text
-									fontWeight="400"
-									color="gray.100"
-									maxWidth="900px"
-									width="100%"
-									textAlign="center"
-									fontSize="36px">
-									Compreende o Canadá, México, Groenlândia e os Estados Unidos
-									da América
-								</Text>
-							</Flex>
+							<SliderSwiper
+								name="América do Norte"
+								src="url('./images/north-america.jpg')">
+								Compreende o Canadá, México, Groenlândia e os Estados Unidos da
+								América
+							</SliderSwiper>
 						</SwiperSlide>
+
 						<SwiperSlide>
-							<Flex
-								align="center"
-								maxHeight="100%"
-								justify="center"
-								direction="column"
-								width="100%"
-								h="450px"
-								bgPosition="center"
-								bgRepeat="no-repeat"
-								bgSize="cover"
-								boxShadow="inset 0 0 0 2000px rgba(0, 0, 0, 0.4)"
-								bgImage="url('./images/oceania.jpg')">
-								<Text fontWeight="700" color="gray.50" fontSize="48px">
-									Oceânia
-								</Text>
-								<Text
-									fontWeight="400"
-									color="gray.100"
-									maxWidth="900px"
-									width="100%"
-									textAlign="center"
-									fontSize="36px">
-									Composta por vários grupos de ilhas do oceano Pacífico
-								</Text>
-							</Flex>
+							<SliderSwiper name="Oceânia" src="url('./images/oceania.jpg')">
+								Composta por vários grupos de ilhas do oceano Pacífico
+							</SliderSwiper>
 						</SwiperSlide>
+
 						<SwiperSlide>
-							<Flex
-								align="center"
-								maxHeight="100%"
-								justify="center"
-								direction="column"
-								width="100%"
-								h="450px"
-								bgPosition="center"
-								bgRepeat="no-repeat"
-								bgSize="cover"
-								boxShadow="inset 0 0 0 2000px rgba(0, 0, 0, 0.4)"
-								bgImage="url('./images/south-america.jpg')">
-								<Text fontWeight="700" color="gray.50" fontSize="48px">
-									América do Sul
-								</Text>
-								<Text
-									fontWeight="400"
-									color="gray.100"
-									maxWidth="900px"
-									width="100%"
-									textAlign="center"
-									fontSize="36px">
-									Abrangendo 12% da superfície terrestre e 6% da população
-									mundial
-								</Text>
-							</Flex>
+							<SliderSwiper
+								name="América do Sul"
+								src="url('./images/south-america.jpg')">
+								Abrangendo 12% da superfície terrestre e 6% da população mundial
+							</SliderSwiper>
 						</SwiperSlide>
 					</Swiper>
 				</Box>
