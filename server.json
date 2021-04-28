@@ -1,0 +1,47 @@
+{
+  "continents": [
+    {
+      "id": 1,
+      "name": "África",
+      "description": "30 milhões de quilômetros quadrado",
+      "src": "url('./images/africa.jpg')"
+    },
+    {
+      "id": 2,
+      "name": "Antártida",
+      "description": "É o continente mais frio e mais seco",
+      "src": "url('./images/antarctica.jpg')"
+      
+    },
+    {
+      "id": 3,
+      "name": "Ásia",
+      "description": "O maior dos continentes, tanto em área como em população",
+      "src": "url('./images/asia.jpg')"
+    },
+    {
+      "id": 4,
+      "name": "Europa",
+      "description": "O Continente mais antigo.",
+      "src": "url('./images/europe.jpg')"
+    },
+    {
+      "id": 5,
+      "name": "América do Norte",
+      "description": "Compreende o Canadá, México, Groenlândia e os Estados Unidos da América",
+      "src": "url('./images/north-america.jpg')"
+    },
+    {
+      "id": 6,
+      "name": "Oceânia",
+      "description": "Composta por vários grupos de ilhas do oceano Pacífico",
+      "src": "url('./images/oceania.jpg')"
+    },
+    {
+      "id": 7,
+      "name": "América do Sul",
+      "description": "O maior dos continentes, tanto em área como em população",
+      "src": "url('./images/south-america.jpg')"
+    }
+  ]
+}

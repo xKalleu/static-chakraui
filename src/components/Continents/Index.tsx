@@ -5,8 +5,27 @@ import SwiperCore, { Navigation, Pagination } from 'swiper';
 SwiperCore.use([Navigation, Pagination]);
 
 import { SliderSwiper } from './SliderSwiper';
+import { useEffect, useState } from 'react';
+import api from '../../services/api';
+
+export interface IContinent {
+	id: number;
+	name: string;
+	description: string;
+	src: string;
+}
 
 export function Continents() {
+	const [continent, setContinent] = useState<IContinent[]>([]);
+
+	console.log(continent);
+
+	useEffect(() => {
+		api.get('continents').then((response) => {
+			setContinent(response.data);
+		});
+	}, []);
+
 	return (
 		<Flex
 			as="section"
@@ -51,54 +70,13 @@ export function Continents() {
 							console.log('Slide index changed to: ', swiper.activeIndex);
 						}}
 						onReachEnd={() => console.log('Swiper end reached')}>
-						<SwiperSlide>
-							<SliderSwiper name="África" src="url('./images/africa.jpg')">
-								30 milhões de quilômetros quadrado
-							</SliderSwiper>
-						</SwiperSlide>
-
-						<SwiperSlide>
-							<SliderSwiper
-								name="Antártida"
-								src="url('./images/antarctica.jpg')">
-								É o continente mais frio e mais seco
-							</SliderSwiper>
-						</SwiperSlide>
-
-						<SwiperSlide>
-							<SliderSwiper name="Ásia" src="url('./images/asia.jpg')">
-								O maior dos continentes, tanto em área como em população
-							</SliderSwiper>
-						</SwiperSlide>
-
-						<SwiperSlide>
-							<SliderSwiper name="Europa" src="url('./images/europe.jpg')">
-								O Continente mais antigo.
-							</SliderSwiper>
-						</SwiperSlide>
-
-						<SwiperSlide>
-							<SliderSwiper
-								name="América do Norte"
-								src="url('./images/north-america.jpg')">
-								Compreende o Canadá, México, Groenlândia e os Estados Unidos da
-								América
-							</SliderSwiper>
-						</SwiperSlide>
-
-						<SwiperSlide>
-							<SliderSwiper name="Oceânia" src="url('./images/oceania.jpg')">
-								Composta por vários grupos de ilhas do oceano Pacífico
-							</SliderSwiper>
-						</SwiperSlide>
-
-						<SwiperSlide>
-							<SliderSwiper
-								name="América do Sul"
-								src="url('./images/south-america.jpg')">
-								Abrangendo 12% da superfície terrestre e 6% da população mundial
-							</SliderSwiper>
-						</SwiperSlide>
+						{continent.map((cont) => (
+							<SwiperSlide key={cont.id}>
+								<SliderSwiper name={cont.name} src={cont.src}>
+									{cont.description}
+								</SliderSwiper>
+							</SwiperSlide>
+						))}
 					</Swiper>
 				</Box>
 			</Flex>
