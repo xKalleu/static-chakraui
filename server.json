@@ -4,7 +4,15 @@
       "id": 1,
       "name": "África",
       "description": "30 milhões de quilômetros quadrado",
-      "src": "url('./images/africa.jpg')"
+      "src": "url('./images/africa.jpg')",
+      "number_cities": "86",
+      "countries": "30",
+      "languages": "12",
+      "cities ": [
+        {"city":"Governador Valadares", "state":"Minas Gerais"},
+        {"city":"Uberaba", "state":"São Paulo"},
+        {"city":"Capitão Andrade", "state":"Minas Gerais"}
+      ]
     },
     {
       "id": 2,
