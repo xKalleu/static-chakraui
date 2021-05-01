@@ -1,7 +1,10 @@
-import { Flex, Text, Grid, Image, Avatar } from '@chakra-ui/react';
-import { CardCitie } from './CardCitie';
+import { Flex, Text, Grid } from '@chakra-ui/react';
 
-export function Cities() {
+interface CitiesProps {
+	children: React.ReactNode;
+}
+
+export function Cities({ children }: CitiesProps) {
 	return (
 		<Flex
 			as="section"
@@ -22,21 +25,7 @@ export function Cities() {
 				</Text>
 			</Flex>
 			<Grid w="100%" templateColumns="repeat(4, 1fr)" gap="45px">
-				<CardCitie
-					city="Londres"
-					region="Reino Unido"
-					src="./images/antarctica.jpg"
-				/>
-				<CardCitie
-					city="Londres"
-					region="Reino Unido"
-					src="./images/antarctica.jpg"
-				/>
-				<CardCitie
-					city="Londres"
-					region="Reino Unido"
-					src="./images/antarctica.jpg"
-				/>
+				{children}
 			</Grid>
 		</Flex>
 	);

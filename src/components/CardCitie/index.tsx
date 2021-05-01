@@ -3,10 +3,9 @@ import { Text, Flex, Avatar, Image } from '@chakra-ui/react';
 interface CardCitieProps {
 	region: string;
 	city: string;
-	src: string;
 }
 
-export function CardCitie({ region, city, src }: CardCitieProps) {
+export function CardCitie({ region, city }: CardCitieProps) {
 	return (
 		<Flex
 			bg="#fff"

@@ -1,11 +1,12 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 
-import { Flex } from '@chakra-ui/react';
-import { SingleBanner } from '../../components/SingleBanner';
-import { Header } from '../../components/Header';
-import { Content } from '../../components/Content';
+import { CardCitie } from '../../components/CardCitie';
 import { Cities } from '../../components/Cities';
+import { Content } from '../../components/Content';
+import { Flex } from '@chakra-ui/react';
+import { Header } from '../../components/Header';
+import { SingleBanner } from '../../components/SingleBanner';
 
 export default function Home({ user }) {
 	const { isFallback } = useRouter();
@@ -16,19 +17,19 @@ export default function Home({ user }) {
 	return (
 		<Flex align="center" direction="column" overflow="hidden">
 			<Header />
-			<SingleBanner />
-			<Content />
-			<Cities />
-			{/* <div>
-				<img
-					src={user.avatar_url}
-					alt={user.name}
-					width="80"
-					style={{ borderRadius: 40 }}
-				/>
-				<h1>{user.name}</h1>
-				<p>{user.bio}</p>
-			</div> */}
+			<SingleBanner name={user.name} />
+			<Content
+				description={user.description}
+				countries={user.countries}
+				languages={user.languages}
+				cities={user.number_cities}
+			/>
+			<Cities>
+				{user.cities.map((cont) => (
+					<CardCitie key={cont.state} region={cont.state} city={cont.city} />
+				))}
+			</Cities>
+			{console.log(user.cities)}
 		</Flex>
 	);
 }

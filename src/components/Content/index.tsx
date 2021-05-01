@@ -1,6 +1,18 @@
 import { Flex, Text, Grid, Image } from '@chakra-ui/react';
 
-export function Content() {
+interface ContentProps {
+	description: string;
+	countries: string;
+	languages: string;
+	cities: string;
+}
+
+export function Content({
+	description,
+	countries,
+	languages,
+	cities
+}: ContentProps) {
 	return (
 		<Flex
 			as="section"
@@ -17,17 +29,14 @@ export function Content() {
 						color="gray.700"
 						fontSize="24px"
 						textAlign="justify">
-						A Europa é, por convenção, um dos seis continentes do mundo.
-						Compreendendo a península ocidental da Eurásia, a Europa geralmente
-						divide-se da Ásia a leste pela divisória de águas dos montes Urais,
-						o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste
+						{description}
 					</Text>
 				</Flex>
 
 				<Grid w="100%" templateColumns="repeat(3, 1fr)" gap={6}>
 					<Flex align="center" justify="center" direction="column">
 						<Text fontWeight="600" color="yellow.900" fontSize="48px">
-							50
+							{countries}
 						</Text>
 						<Text fontWeight="600" color="gray.700" fontSize="24px">
 							países
@@ -35,7 +44,7 @@ export function Content() {
 					</Flex>
 					<Flex align="center" justify="center" direction="column">
 						<Text fontWeight="600" color="yellow.900" fontSize="48px">
-							60
+							{languages}
 						</Text>
 						<Text fontWeight="600" color="gray.700" fontSize="24px">
 							línguas
@@ -43,7 +52,7 @@ export function Content() {
 					</Flex>
 					<Flex align="center" justify="center" direction="column">
 						<Text fontWeight="600" color="yellow.900" fontSize="48px">
-							27
+							{cities}
 						</Text>
 						<Text fontWeight="600" color="gray.700" fontSize="24px">
 							cidades +100
