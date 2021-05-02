@@ -1,12 +1,14 @@
 import { Flex, Text, Box } from '@chakra-ui/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
+import Link from 'next/link';
 
 SwiperCore.use([Navigation, Pagination]);
 
 import { SliderSwiper } from './SliderSwiper';
 import { useEffect, useState } from 'react';
 import api from '../../services/api';
+import { makeSlug } from '../../services/utils/makeSlug';
 
 export interface IContinent {
 	id: number;
@@ -72,9 +74,13 @@ export function Continents() {
 						onReachEnd={() => console.log('Swiper end reached')}>
 						{continent.map((cont) => (
 							<SwiperSlide key={cont.id}>
-								<SliderSwiper name={cont.name} src={cont.src}>
-									{cont.description}
-								</SliderSwiper>
+								<Link href={`/continents/${encodeURIComponent(cont.id)}`}>
+									<a>
+										<SliderSwiper name={cont.name} src={cont.src}>
+											{cont.description}
+										</SliderSwiper>
+									</a>
+								</Link>
 							</SwiperSlide>
 						))}
 					</Swiper>

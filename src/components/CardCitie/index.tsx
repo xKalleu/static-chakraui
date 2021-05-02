@@ -1,20 +1,23 @@
 import { Text, Flex, Avatar, Image } from '@chakra-ui/react';
 
 interface CardCitieProps {
+	keygen: number;
 	region: string;
 	city: string;
+	src: string;
 }
 
-export function CardCitie({ region, city }: CardCitieProps) {
+export function CardCitie({ region, city, keygen, src }: CardCitieProps) {
 	return (
 		<Flex
+			key={keygen}
 			bg="#fff"
 			w="100%"
 			align="center"
 			justify="center"
 			direction="column"
 			borderRadius="5px">
-			<Image src="./images/antarctica.jpg" h="173px" alt="Airplane" />
+			<Image src={src} h="173px" alt="Airplaneteste" />
 			<Flex
 				w="100%"
 				justify="space-between"

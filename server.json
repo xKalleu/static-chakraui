@@ -9,9 +9,9 @@
       "countries": "30",
       "languages": "12",
       "cities": [
-        {"city":"Governador Valadares", "state":"Minas Gerais"},
-        {"city":"Uberaba", "state":"São Paulo"},
-        {"city":"Capitão Andrade", "state":"Minas Gerais"}
+        {"id":1, "city":"Governador Valadares", "state":"Minas Gerais"},
+        {"id":2, "city":"Uberaba", "state":"São Paulo"},
+        {"id":3, "city":"Capitão Andrade", "state":"Minas Gerais"}
       ]
     },
     {
