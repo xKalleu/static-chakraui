@@ -5,6 +5,7 @@
       "name": "África",
       "description": "30 milhões de quilômetros quadrado",
       "src": "url('./images/africa.jpg')",
+      "slug": "africa",
       "number_cities": "86",
       "countries": "30",
       "languages": "12",
@@ -18,38 +19,91 @@
       "id": 2,
       "name": "Antártida",
       "description": "É o continente mais frio e mais seco",
-      "src": "url('./images/antarctica.jpg')"
-      
+      "src": "url('./images/antarctica.jpg')",
+      "slug": "antartida",
+      "number_cities": "86",
+      "countries": "30",
+      "languages": "12",
+      "cities": [
+        {"id":1, "city":"Governador Valadares", "state":"Minas Gerais"},
+        {"id":2, "city":"Uberaba", "state":"São Paulo"},
+        {"id":3, "city":"Capitão Andrade", "state":"Minas Gerais"}
+      ]      
     },
     {
       "id": 3,
       "name": "Ásia",
       "description": "O maior dos continentes, tanto em área como em população",
-      "src": "url('./images/asia.jpg')"
+      "src": "url('./images/asia.jpg')",
+      "slug": "asia",
+      "number_cities": "86",
+      "countries": "30",
+      "languages": "12",
+      "cities": [
+        {"id":1, "city":"Governador Valadares", "state":"Minas Gerais"},
+        {"id":2, "city":"Uberaba", "state":"São Paulo"},
+        {"id":3, "city":"Capitão Andrade", "state":"Minas Gerais"}
+      ]    
     },
     {
       "id": 4,
       "name": "Europa",
       "description": "O Continente mais antigo.",
-      "src": "url('./images/europe.jpg')"
+      "src": "url('./images/europe.jpg')",
+      "slug": "europa",
+      "number_cities": "86",
+      "countries": "30",
+      "languages": "12",
+      "cities": [
+        {"id":1, "city":"Governador Valadares", "state":"Minas Gerais"},
+        {"id":2, "city":"Uberaba", "state":"São Paulo"},
+        {"id":3, "city":"Capitão Andrade", "state":"Minas Gerais"}
+      ]  
     },
     {
       "id": 5,
       "name": "América do Norte",
       "description": "Compreende o Canadá, México, Groenlândia e os Estados Unidos da América",
-      "src": "url('./images/north-america.jpg')"
+      "src": "url('./images/north-america.jpg')",
+      "slug": "america-do-norte",
+      "number_cities": "86",
+      "countries": "30",
+      "languages": "12",
+      "cities": [
+        {"id":1, "city":"Governador Valadares", "state":"Minas Gerais"},
+        {"id":2, "city":"Uberaba", "state":"São Paulo"},
+        {"id":3, "city":"Capitão Andrade", "state":"Minas Gerais"}
+      ] 
     },
     {
       "id": 6,
       "name": "Oceânia",
       "description": "Composta por vários grupos de ilhas do oceano Pacífico",
-      "src": "url('./images/oceania.jpg')"
+      "src": "url('./images/oceania.jpg')",
+      "slug": "oceania",
+      "number_cities": "86",
+      "countries": "30",
+      "languages": "12",
+      "cities": [
+        {"id":1, "city":"Governador Valadares", "state":"Minas Gerais"},
+        {"id":2, "city":"Uberaba", "state":"São Paulo"},
+        {"id":3, "city":"Capitão Andrade", "state":"Minas Gerais"}
+      ] 
     },
     {
       "id": 7,
       "name": "América do Sul",
       "description": "O maior dos continentes, tanto em área como em população",
-      "src": "url('./images/south-america.jpg')"
+      "src": "url('./images/south-america.jpg')",
+      "slug": "america-do-sul",
+      "number_cities": "86",
+      "countries": "30",
+      "languages": "12",
+      "cities": [
+        {"id":1, "city":"Governador Valadares", "state":"Minas Gerais"},
+        {"id":2, "city":"Uberaba", "state":"São Paulo"},
+        {"id":3, "city":"Capitão Andrade", "state":"Minas Gerais"}
+      ] 
     }
   ]
 }
