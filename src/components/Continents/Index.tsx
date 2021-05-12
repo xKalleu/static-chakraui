@@ -8,13 +8,13 @@ SwiperCore.use([Navigation, Pagination]);
 import { SliderSwiper } from './SliderSwiper';
 import { useEffect, useState } from 'react';
 import api from '../../services/api';
-import { makeSlug } from '../../services/utils/makeSlug';
 
 export interface IContinent {
 	id: number;
 	name: string;
 	description: string;
 	src: string;
+	slug: string;
 }
 
 export function Continents() {
